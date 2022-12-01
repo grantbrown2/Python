@@ -55,3 +55,8 @@ print(name)
 x=1
 y=2
 print(x+y)
+
+count = 0
+while count <= 10:
+    print("looping - ", count)
+    count += 1
