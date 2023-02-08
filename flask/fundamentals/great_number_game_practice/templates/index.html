@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <h1>Great Number Game</h1>
+    <p>Guess a number between 1 and 100</p>
+    <div class="center">
+    <form action="/guess" method="post">
+        <div class="container">
+            <label for="guess" class="label">Choose your number:</label>
+            <input type="text" name="guess" class="form" style="width: 25px;">
+        </div>
+        <div class="container">
+            <input class="submit" type="submit" name="guess" value="Submit">
+        </div>
+    </form>
+    </div>
+    {%if validation == "high"%}
+    <div class="high">You are too high!<br>Try again!</div>
+    {%endif%}
+    {%if validation == "low"%}
+    <div class="low">You are too low!<br>Try again!</div>
+    {%endif%}
+    {%if validation == "correct"%}
+    <div class="correct" style="background-color: green;">
+        <div>
+            <p>You are correct!</p>
+            <p class="playAgain"><a href="/">Play Again!</a></p>
+        </div>
+    </div>
+    {%endif%}
+</body>
+</html>

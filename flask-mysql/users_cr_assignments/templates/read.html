@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (All)</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin: 25px;
+}
+table {
+    border: black solid 2px;
+    margin: 25px auto 5px auto;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+th {
+    border-bottom: 2px solid black;
+}
+td {
+    padding: 5px;
+}
+a {
+    margin: 0 0 0 7%;
+}
+.container {
+    width: 600px;
+    margin: auto;
+}
+</style>
+<body>
+    <h1>All Users</h1>
+    <div class="container">
+    <table>
+        <tr class="header">
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+        </tr>
+    {%for one_user in all_users%}
+        <tr>
+            <td>{{one_user.id}}</td>
+            <td>{{one_user.full_name}}</td>
+            <td>{{one_user.email}}</td>
+            <td>{{one_user.create_at}}</td>
+        </tr>
+    {%endfor%}
+    </table>
+    <a href="/create">Add A New User!</a>
+    </div>
+</body>
+</html>

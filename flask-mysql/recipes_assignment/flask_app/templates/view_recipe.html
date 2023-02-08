@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Recipe</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="spacer-2">
+        <h1 class="header">Edit your recipe!</h1>
+        <div class="links">
+            <a href="/recipes">Back to recipes</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="container-5">
+        <div class="spacer-2">
+            <h4>{{one_recipe.name}}</h4>
+            <h5>Posted by: {{one_recipe.posted_by.first_name}}</h5>
+        </div>
+        <div class="container-6">
+            <div class="spacer">
+                <p>Description:</p>
+                <p>{{one_recipe.description}}</p>
+            </div>
+            <div class="spacer">
+                <p>Instructions:</p>
+                <p>{{one_recipe.instructions}}</p>
+            </div>
+            <div class="spacer">
+                <p>Date Created:</p>
+                <p>{{one_recipe.created_at}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

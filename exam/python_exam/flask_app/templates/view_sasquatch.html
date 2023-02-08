@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Sasquatch Sighting</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/create_sasquatch.css')}}">
+</head>
+<body>
+    <div class="spacer-2">
+        <h1 class="header">View Sasquatch</h1>
+        <div class="links">
+            <p>{{user.full_name}}</p>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="container-5">
+        <div class="spacer-2">
+            <h4>{{one_sasquatch.location}}</h4>
+            <h5>Posted by: {{one_sasquatch.posted_by.full_name}}</h5>
+        </div>
+        <div class="container-6">
+            <div class="spacer">
+                <p>What Happened:</p>
+                <p>{{one_sasquatch.what_happened}}</p>
+            </div>
+            <div class="spacer">
+                <p>Date Spotted:</p>
+                <p>{{one_sasquatch.date_seen}}</p>
+            </div>
+            <div class="spacer">
+                <p>Sasquatches Encountered:</p>
+                <p>{{one_sasquatch.count}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

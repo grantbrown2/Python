@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+p {
+    font-size: 20px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+input {
+    border: 2px solid black;
+}
+.center {
+    text-align: center;
+    margin: 25px 0;
+}
+.high, .low, .correct {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border: 2px black solid;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 3px black solid;
+}
+.playAgain {
+    margin-top: 20px;
+    border: 2px black solid;
+    padding: 5px;
+    box-shadow: 2px 2px black;
+    background-color: white;
+}
+.submit {
+    margin: 15px;
+    box-shadow: 2px 2px black;
+    background-color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}

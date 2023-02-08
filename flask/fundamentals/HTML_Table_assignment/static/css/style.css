@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: lightblue;
+}
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    border: solid black 1px;
+    width: 400px;
+}
+.container {
+    margin: auto;
+    text-align: center;
+    border: black solid 2px;
+    width: 750px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+}
+table {
+    margin: auto;
+}
+th {
+    padding: 5px 24px;
+    font-weight: bold;
+    font-size: 37px;
+    border-bottom: black solid 2px;
+}
+td {
+    border-bottom: black solid 2px;
+    cursor: pointer;
+}

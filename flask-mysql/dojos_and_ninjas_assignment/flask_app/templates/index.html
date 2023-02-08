@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dojo.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="container-1">
+            <h2>New Dojo</h2>
+
+
+        <!-- VALIDATION EXAMPLE -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+            <form action='/dojo/add' method="POST">
+                <label for="name">Name: </label>
+                <input type="text" name="dojoName">
+                <input class="button" type="submit" value="Create">
+            </form>
+        </div>
+    
+        <div class="div">
+            <h2>All Dojos</h2>
+            <div class="container-2">
+                {%for one_dojo in list_all_dojos%}
+                    <a class="a" href="/dojo/show/{{one_dojo.id}}">{{one_dojo.name}}<br></a>
+                {%endfor%}
+            </div>
+            <br><a href="/ninja">Add Ninja</a>
+        </div>
+    </div>
+</body>
+</html>

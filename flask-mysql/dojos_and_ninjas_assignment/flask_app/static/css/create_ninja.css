@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    margin: 50px 0 10px 50px;
+}
+.container {
+    margin: 0 0 0 50px;
+}
+label, input, select {
+    margin-bottom: 5px;
+}
+.button, a {
+    width: 75px;
+    height: 25px;
+    background-color: rgba(226, 226, 226, 0.699);
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+}
+.input {
+    width: 250px;
+}
+.bottom {
+    width: 500px;
+}
+a {
+    display: inline-block;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+}

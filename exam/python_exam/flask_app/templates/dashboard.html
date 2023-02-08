@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+</head>
+<body>
+    <div class="block">
+        <h2>Sasquatch Websighting</h2>
+        <div class="spacer-1">
+            <div><p>{{user.full_name}}</p></div>
+            <a href="/sasquatch/new">Report</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="spacer">
+        <h3>Reported Sightings:</h3>
+    </div>
+    <div class="container">
+        <div class="table">
+            <table>
+                <tr class="header">
+                    <th>Location:</th>
+                    <th>Date Spotted:</th>
+                    <th>Reported By:</th>
+                    <th>Actions:</th>
+                </tr>
+                {%for one_sasquatch in sasquatch%}
+                <tr>
+                    <td>{{one_sasquatch.location}}</td>
+                    <td>{{one_sasquatch.date_seen}}</td>
+                    <td>{{one_sasquatch.posted_by.first_name}}</td>
+                    <td>
+                        <a href="/view_sasquatch/{{one_sasquatch.id}}">view</a>
+                        {%if user.id == one_sasquatch.posted_by.id %}
+                        <a href="/edit_sasquatch/{{one_sasquatch.id}}">edit</a>
+                        <a href="/delete_sasquatch/{{one_sasquatch.id}}">delete</a>
+                        {%endif%}
+                    </td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

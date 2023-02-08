@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard Assignment</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <h1>Checkerboard</h1>
+    <table>
+    <!-- Checks if the checkerboard is the default then repeats the table row 4 times then the table data 4 times giving the 8x8 red&black board -->
+    {%if board == "default" %}
+        {% for boards in range(4): %}
+        <tr>
+            {% for boxes in range(4): %}
+            <td class="color1"></td>
+            <td class="color2"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for boxes in range(4): %}
+            <td class="color2"></td>
+            <td class="color1"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    {%endif%}
+    <!-- Checks if the checkerboard has a custom y size then applies it the selected number of times and gives default color of black and lightblue-->
+    {%if board == "customSize"%}
+        {% for boards in range(numY): %}
+        <tr>
+            {% for boxes in range(4): %}
+            <td class="color1"></td>
+            <td class="color3"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for boxes in range(4): %}
+            <td class="color3"></td>
+            <td class="color1"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    {%endif%}
+    <!-- Checks if the board has a custom size on the x and y axis then applies it a selected number of times and gives it a default color of lime and black-->
+    {%if board == "customSize2"%}
+        {% for boards in range(numY): %}
+        <tr>
+            {% for boxes in range(numX): %}
+            <td class="color1"></td>
+            <td class="color4"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for boxes in range(numX): %}
+            <td class="color4"></td>
+            <td class="color1"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    {%endif%}
+    <!-- Checks if it has a custom x and y axis as well as two selected colors -->
+    {%if board == "customSize3"%}
+        {% for boards in range(numY): %}
+        <tr>
+            {% for boxes in range(numX): %}
+            <td style="background-color: {{customColor1}};"></td>
+            <td style="background-color: {{customColor2}};"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for boxes in range(numX): %}
+            <td style="background-color: {{customColor2}};"></td>
+            <td style="background-color: {{customColor1}};"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    {%endif%}
+</body>
+</html>

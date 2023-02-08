@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+}
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: aqua;
+}
+.button {
+    background-color: rgb(209, 209, 209);
+    width: 75px;
+    margin: 20px auto;
+    text-align: center;
+    border: solid black 1px;
+}

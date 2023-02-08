@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin: 25px;
+}
+table {
+    border: black solid 2px;
+    margin: 25px auto 5px auto;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+th {
+    border-bottom: 2px solid black;
+}
+td {
+    padding: 5px;
+}
+.container {
+    width: 800px;
+    margin: auto;
+}
+.smallContainer {
+    text-align: center;
+}
+p {
+    margin: 10px 0 25px 15px;
+}
+.box {
+    border: black solid 2px;
+    width: 500px;
+    margin: auto;
+}

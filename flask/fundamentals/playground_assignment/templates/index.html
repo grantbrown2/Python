@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Assignment</title>
+<style>
+.container {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box {
+    border: 2px solid black;
+    height: 250px;
+    width: 250px;
+    background-color: lightblue;
+    margin: 20px;
+}
+.box3 {
+    border: 2px solid black;
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    background-color: {{color}};
+}
+</style>
+</head>
+<body>
+    {% if route == "level1" %}
+        <h1 style="text-align:center;margin:50px;">Welcome!</h1>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    {% endif %}
+    {% if route == "level2" %}
+        <h1 style="text-align:center;margin:50px;">Welcome!</h1>
+        <div class="container">
+            {% for boxCount in range(0,num): %}
+                <div class="box"></div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {%if route == "level3"%}
+        <h1 style="text-align:center;margin:50px;">Welcome!</h1>
+        <div class="container">
+            {% for boxCount in range(0,num): %}
+                <div class="box3"></div>
+            {% endfor %}
+        </div>
+    {%endif%}
+</body>
+</html>

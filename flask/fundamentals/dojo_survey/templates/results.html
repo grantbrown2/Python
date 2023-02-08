@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Results</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="container" style="height: 500px;">
+        <h1>Dojo Survey Results</h1>
+        <p class="name">{{session['name']}}</p>
+        <p class="results">Location: {{session['location']}}</p>
+        <p class="results">Favorite Language: {{session['language']}}</p>
+        <p class="results">Comments: {{session['comments']}}</p>
+        <a href="/" class="home">Home</a>
+    </div>
+</body>
+</html>

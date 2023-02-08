@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+    color: rgb(59, 59, 255);
+    margin-bottom: 15px;
+}
+.login {
+    color: rgb(0, 163, 0);
+}
+label {
+    color: white;
+}
+input {
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    margin: 10px 0;
+    padding-left: 5px;
+}
+.main {
+    display: flex;
+}
+.container, .container-2 {
+    background-color: rgb(73, 73, 73);
+    width: 30%;
+    margin: 25px 100px 25px 25px;
+    padding: 25px;
+}
+.register-btn, .login-btn {
+    border: none;
+    color: white;
+    background-color: rgb(59, 59, 255);
+    width: 35%;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-btn {
+    background-color: rgb(0, 163, 0);
+}
+.flash {
+    border-radius: 5px;
+    width: 100%;
+    background-color: whitesmoke;
+    color: rgba(255, 0, 0, 0.678);
+    margin-bottom: 10px;
+    padding: 20px 0;
+}
+span {
+    margin: 25px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+h1 {
+    text-align: center;
+    margin: 25px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #6699cc ;
+    margin: 0 50%;
+    border-radius: 5px;
+    padding: 10px;
+}
